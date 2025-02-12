@@ -1,0 +1,39 @@
+// User input
+
+#include<stdio.h>
+
+int main(){
+    int num,i;
+
+    printf("Enter number of elements: ");
+    scanf("%d",&num);
+
+    int array[num];
+
+    
+    for (i = 0; i < num; i++) {
+        printf("Enter %d elements[%d]:",num,i+1);
+        scanf("%d",&array[i]);
+    }
+    printf("The entered array is: ");
+    for (i = 0; i < num; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    int max=array[0];
+    int min=array[0];
+
+    for (i=1;i<num;i++) {
+        if(array[i]>max){
+            max=array[i];
+        }
+        if(array[i]<min){
+            min=array[i];
+        }
+    }
+    printf("Minimum value: %d\n",min);
+    printf("Maximum value: %d\n",max);
+
+    return 0;
+}
