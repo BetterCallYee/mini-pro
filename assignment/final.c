@@ -58,11 +58,52 @@ if (com<5){
 printf("total to pay:%d bath\n",total_price);
 }
 
+void array(){
+    int num,i;
+
+    printf("Enter number of elements: ");
+    scanf("%d",&num);
+    printf("\n");
+
+    int array[num];
+
+    for (i = 0; i < num; i++) {
+        printf("Enter %d elements[%d]:",num,i+1);
+        scanf("%d",&array[i]);
+    }
+    printf("\nThe entered array is: ");
+    for (i = 0; i < num; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    int max=array[0];
+    int min=array[0];
+
+    for (i=1;i<num;i++) {
+        if(array[i]>max){
+            max=array[i];
+        }
+        if(array[i]<min){
+            min=array[i];
+        }
+    }
+    printf("\nMinimum value: %d\n",min);
+    printf("Maximum value: %d\n",max);
+
+    printf("\nReverse array is:");
+    for (i = num - 1; i >= 0; i--) {
+        printf("%d ", array[i]);
+    }
+
+
+}
+
 int main(){
     int press,l;
     greet();
     loop1:
-    printf("\nPress1 for Shoe(rifhan) \nPress2 for Computer(hamdan) \nPress3 for Multiply(faris)\nPress:");
+    printf("\nPress1 for Shoe\nPress2 for Computer\nPress3 for Multiply\nPress4 for array\nPress:");
     scanf("%d",&press);
     if(press==1){
         rifhan();
@@ -70,6 +111,8 @@ int main(){
         hamdan();
     }else if(press==3){
         faris();
+    }else if(press==4){
+        array();
     }else{
         printf("Error Please select in choice!");
     }
@@ -80,4 +123,6 @@ int main(){
     }else{
         printf("\nThank you");
     }
+    
+
 }
