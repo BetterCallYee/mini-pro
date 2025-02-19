@@ -80,6 +80,4 @@ int main(){
     }else{
         printf("\nThank you");
     }
-    
-
 }
